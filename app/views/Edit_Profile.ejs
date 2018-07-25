@@ -1,0 +1,110 @@
+
+<!-- nav bar -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+
+<link rel='stylesheet' href='/css/navbar.css' />
+<!-- nav bar -->
+<%include profileNav.ejs%>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<title>Edit Profile</title>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+
+            <form method="POST" action="/users/edit/<%= user._id%>">
+            <!-- resumt -->
+                <div class="panel panel-default">
+
+                    <div class="bs-callout bs-callout-danger">
+                        <div id="form-group">
+                            <label>Name:</label>
+                            <input class="form-control" name="name" type="text" value="<%= user.name%>" placeholder="Kevin Savsani"/>
+                        </div>
+                        <div id="form-group">
+                            <label>Email:</label>
+                            <input class="form-control" name="email" type="text" value="<%= user.email%>" placeholder="example@iitg.ernet.in"/>
+                        </div>
+                        <div id="form-group">
+                            <label>Username:</label>
+                            <input class="form-control" name="username" type="text"  value="<%= user.username%>"  placeholder="user-name"/>
+                        </div>
+
+                </div>
+                <div class="bs-callout bs-callout-danger">
+                    <div id="form-group">
+                        <label>Password:</label>
+                        <input class="form-control" name="password" type="password" value="<%= user.password%>"placeholder="******" minlength="6"/>
+                    </div>
+                    <div id="form-group">
+                        <label>Confirm:</label>
+                        <input class="form-control" name="password2" type="password" value="<%= user.password%>" placeholder="******"/>
+                    </div>
+                </div>
+
+                <div class="bs-callout bs-callout-danger">
+
+                    <div id="form-group">
+                        <label>FacebookID:</label>
+                        <input class="form-control" name="facebookID" type="number" value="<%= user.facebookID%>" placeholder="100005813702327"/>
+                    </div>
+
+                    <div id="form-group">
+                        <label>Contact No:</label>
+                        <input class="form-control" name="contactNo" type="tel"  value="<%= user.contactNo%>"  placeholder="9957986814"/>
+                    </div>
+                    <div id="form-group">
+                        <label>Designation:</label>
+                        <input class="form-control" name="designation" type="text" value="<%= user.designation%>" placeholder="Professor"/>
+                    </div>
+                    <div id="form-group">
+                        <label>Department:</label>
+                        <input class="form-control" name="department" type="text" value="<%= user.department%>" placeholder="COMPUTER SCIENCE AND ENGINEERING"/>
+                    </div>
+                    <div id="form-group">
+                        <label>Room No.:</label>
+                        <input class="form-control" name="room" type="text" pattern="[A-Za-z0-9-]+"  value="<%= user.room%>" placeholder="H-008"/>
+                    </div>
+                    <div id="form-group">
+                        <label>lINKEDIN:</label>
+                        <input class="form-control" name="linkedin" type="text" value="<%= user.linkedin%>" placeholder="https://www.linkedin.com/in/example-67a3547"/>
+                    </div>
+                    <div id="form-group">
+                        <label>Education Qualifications:</label>
+                        <textarea class="form-control" name="education"  ></textarea>
+                    </div>
+                    <div id="form-group">
+                        <label>Research Interest:</label>
+                        <textarea class="form-control" name="research_interest"></textarea>
+                    </div>
+                    <div id="form-group">
+                        <label>Experience:</label>
+                        <textarea class="form-control" name="experience"></textarea>
+                    </div>
+
+
+
+                </div>
+
+                    <div class="bs-callout bs-callout-danger">
+
+                        <input class="btn btn-primary" type="submit" value="Sign up"/>
+
+                    </div>
+
+        </div>
+            </form>
+        <!-- resume -->
+
+    </div>
+
+        <div class="col-sm-2"></div>
+</div>
+
+</div>

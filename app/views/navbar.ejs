@@ -1,0 +1,45 @@
+<div class="col-sm-3">
+    <% if(user){ %>
+    <a href="/users/edit/<%=user._id%>" class="btn btn-danger btn-block btn-compose-email">Edit Profile</a>
+    <% } %>
+
+    <ul class="nav nav-pills nav-stacked nav-email shadow mb-20">
+
+        <% if(user){ %>
+        <li class="active">
+            <a href="/prof"><i class="fa fa-inbox"></i> Profile </a>
+
+        </li>
+        <li>
+            <a href="/researchs"><i class="fa fa-envelope-o"></i> Researches </a>
+        </li>
+        <li>
+            <a href="/teachings"><i class="fa fa-certificate"></i> Teaching </a>
+        </li>
+        <li>
+            <a href="/publications"><i class="fa fa-file-text-o"></i> Publications </a>
+
+        </li>
+    <% } else { %>
+        <li class="active">
+            <a href="/users/<%= users._id%>"><i class="fa fa-inbox"></i>Profile</a>
+
+        </li>
+
+          <li>
+              <a href="/research/prof/<%=users._id%>"><i class="fa fa-envelope-o"></i> Researches </a>
+          </li>
+          <li>
+              <a href="/teaching/prof/<%=users._id%>"><i class="fa fa-certificate"></i> Teaching </a>
+          </li>
+          <li>
+              <a href="/publication/prof/<%=users._id%>"><i class="fa fa-file-text-o"></i> Publications </a>
+
+          </li>
+        <% } %>
+
+
+    </ul><!-- /.nav -->
+
+    <!-- /.nav -->
+</div>

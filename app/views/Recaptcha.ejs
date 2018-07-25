@@ -1,0 +1,72 @@
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+
+<link rel='stylesheet' href='/css/navbar.css' />
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script type="text/javascript">
+    var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+            'sitekey' : '6LcgQzsUAAAAAP6CkTwccw1EkWMCRClb66lku9VE'
+        });
+    };
+</script>
+
+
+
+<!-- nav bar -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+
+            <form method="POST" action="/login">
+
+                <!-- resumt -->
+                <div class="panel panel-default">
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h1> Login </h1>
+                        <div id="form-group">
+                            <label>Username:</label>
+                            <input class="form-control" name="username" type="text"/>
+                        </div>
+                        <div id="form-group">
+                            <label>Password:</label>
+                            <input class="form-control" name="password" type="password"/>
+                        </div>
+
+                        <div id="html_element"></div>
+
+                        <br/>
+                        <input class="btn btn-primary" type="submit" value="Login"/>
+                        <a href="/users/forgetpass" > Forgot Passward </a>
+                    </div>
+                </div>
+
+            </form>
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                    async defer>
+            </script>
+
+            <!-- resume -->
+
+        <div class="col-sm-2"></div>
+    </div>
+
+    </div>
+
+</div>
+
+

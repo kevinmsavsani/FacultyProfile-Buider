@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon -e css,js,json,ejs app/app.js --watch app"
+  },
+  "author": "Avinash",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-messages": "^1.0.1",
+    "express-recaptcha": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "mongoose": "^4.13.2",
+    "nl2br": "0.0.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "recaptcha": "^1.2.1",
+    "reload": "^2.2.2",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4"
+  }
+}

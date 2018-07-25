@@ -1,0 +1,182 @@
+var express = require('express');
+var router = express.Router();
+const bcrypt = require('bcryptjs');
+const passport = require('passport');
+
+// bring in user model
+var User = require('../models/user');
+
+
+//Resister Form
+
+var errors = "ab";
+
+router.get('/ComputerScience&Engineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Computer Science & Engineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/CivilEngineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Civil Engineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/ChemicalEngineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Chemical Engineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Chemistry', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Chemistry",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Design', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Design",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Electronics&ElectricalEngineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Electronics & Electrical Engineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/HumanitiesandSocialSciences', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Humanities and Social Sciences",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Mathematics', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Mathematics",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Bioscience&Bioengineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Bioscience & Bioengineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/MechanicalEngineering', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Mechanical Engineering",
+                users: user
+            });
+        }
+    });
+});
+
+router.get('/Physics', function(req, res){
+
+    User.find({}, function(err, user){
+        if(err){
+            console.log("err");
+        }
+        else{
+            res.render('Category',{
+                title : "Physics",
+                users: user
+            });
+        }
+    });
+});
+
+
+
+
+module.exports = router;
