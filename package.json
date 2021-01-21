@@ -26,6 +26,6 @@
     "recaptcha": "^1.2.1",
     "reload": "^2.2.2",
     "request": "^2.83.0",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.4.0"
   }
 }
